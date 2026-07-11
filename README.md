@@ -103,6 +103,112 @@ serious technical conversations — email with subject `NDA`.
 `PostgreSQL + RLS` `Supabase` `Stripe` `Turborepo` `Tailwind`
 `Gemini / LLM integration` `Vitest` `pytest` `Vercel`
 
+
+
+
+
+
+
+### 🔝 Top Contributed Repo
+<div align="center">
+
+# Abu Ahmad
+
+### Full-Stack Enterprise SaaS & AI Engineer
+
+**I design and ship production SaaS platforms end-to-end** — architecture, security model, AI pipelines, billing, and launch operations — with the discipline of a team, as one engineer.
+
+<p>
+  <a href="https://devidentity.fabbythemes.com"><img alt="Live product" src="https://img.shields.io/badge/🚀_Live_Product-devidentity.fabbythemes.com-c2a4ff?style=for-the-badge&labelColor=0b080c" /></a>
+</p>
+
+<p>
+  <a href="https://www.linkedin.com/in/abu-ahmad"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-abu--ahmad-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="https://x.com/AbuAhmad369"><img alt="X" src="https://img.shields.io/badge/X-@AbuAhmad369-000?style=flat-square&logo=x&logoColor=white" /></a>
+  <a href="mailto:abuahmad105116@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-abuahmad105116@gmail.com-8b5cf6?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <img alt="Location" src="https://img.shields.io/badge/Dhaka,_Bangladesh-🌏-1c1622?style=flat-square" />
+</p>
+
+</div>
+
+---
+
+## 🏆 Flagship: DevIdentity — a verified developer-identity platform
+
+> **Live in production:** [devidentity.fabbythemes.com](https://devidentity.fabbythemes.com) · **Deep-dive case study:** [DevIdentity Public Case Study](https://github.com/abuahmad369/devidentity-case-study)
+
+An autonomous, privacy-preserving aggregation network that pulls a developer's work from **10+ platforms** (GitHub, Kaggle, Hugging Face, LeetCode, arXiv, Google Scholar, …), normalizes it into one universal identity model, runs evidence-based AI analysis, and publishes a **living, recruiter-verifiable portfolio** — including a Judge Console that lets recruiters check code authenticity, not just take it on faith.
+
+**Engineering signature — the patterns the platform is built on:**
+
+- 🛡️ **Defensive Server-Side Gating** — middleware as the single page gate with an explicit public allowlist; every API route independently re-verifies the session and resolves entitlements from the database. Client-side gates are presentation; the server gate is the law.
+- ⏱️ **Automated Token-Backed Rate Limiting** — per-user, per-endpoint daily quotas with full usage attribution (endpoint, tokens consumed, model used), where the same metering table doubles as the admin analytics source. One mechanism, two features.
+- 🔏 **Immutable Actor-Attributed Verification** — commit-authorship checks graded against GitHub's public contributor statistics and fork-provenance badges cached with timestamps on the records they describe. Graded, neutral, evidence-backed signals — never accusations.
+- 🔀 **Provider-Agnostic AI Fallbacks** — a single generation layer (Gemini-primary, Groq automatic fallback, Claude for premium tasks) where feature code never imports a vendor SDK, every persisted output is stamped with its concrete model ID and prompt version, and a JSON repair ladder salvages malformed model output instead of failing the request.
+
+**Under the hood:** Next.js 16 App Router · TypeScript · Turborepo + pnpm monorepo · Supabase (Postgres, strict RLS, PKCE auth) · Stripe tiered billing (webhook as the sole writer of paid state) · Sentry · Vercel, custom-domain routed.
+
+---
+
+## 🔒 Why the source is proprietary
+
+DevIdentity is a **commercial product**, not a portfolio exercise — the parsing engines, prompt systems, verification logic, UI system, and database schemas are core IP, held privately under a strict all-rights-reserved license.
+
+What's public instead is deliberately chosen to be *more* useful for evaluation than raw source:
+
+| Public artifact | What it demonstrates |
+|---|---|
+| [**Live production instance**](https://devidentity.fabbythemes.com) | The product itself — auth, billing, AI analysis, and verification, running for real users |
+| [**Deep-dive case study**](https://github.com/abuahmad369/devidentity-case-study) | Full architecture, security model, and engineering decisions — the *why* behind the build |
+| **Public API surface** (documented in the case-study repo) | Consent-respecting machine-to-machine reads of verified profile data |
+
+Enterprise evaluation, licensing, or a guided code walkthrough under NDA: **abuahmad105116@gmail.com**.
+
+---
+
+## 🧰 Core stack
+
+<p>
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js_16-0b080c?style=flat-square&logo=next.js&logoColor=white" />
+  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img alt="Node" src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+  <img alt="Supabase" src="https://img.shields.io/badge/Supabase_·_Postgres-181818?style=flat-square&logo=supabase&logoColor=3FCF8E" />
+  <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-0F172A?style=flat-square&logo=tailwindcss&logoColor=38BDF8" />
+  <img alt="Turborepo" src="https://img.shields.io/badge/Turborepo_+_pnpm-000?style=flat-square&logo=turborepo&logoColor=EF4444" />
+  <img alt="Stripe" src="https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white" />
+  <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white" />
+  <img alt="Sentry" src="https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white" />
+  <img alt="AI" src="https://img.shields.io/badge/LLM_Engineering-Gemini_·_Groq_·_Claude-c2a4ff?style=flat-square" />
+</p>
+
+**What I'm strongest at:**
+
+- **Enterprise SaaS architecture** — monorepo discipline, pure-logic/I-O separation, universal normalization layers, additive zero-downtime schema evolution
+- **Security engineering** — RLS-first data access, defense-in-depth auth, signature-verified webhooks, hardened CSP, two-direction prompt-injection guarding
+- **Applied AI systems** — evidence-only prompting, prompt versioning, defensive output normalization, cost engineering (content-hash diffing, precondition gates, hard input caps)
+- **Product operations** — Stripe billing lifecycles, OAuth/domain cutovers, launch runbooks, observability wired-but-inert until activated
+
+---
+
+## 📈 How I work
+
+1. **Trust is the standing decision filter.** Anything that would show fake data, trust client input, or skip a server guard doesn't ship — regardless of how fast it would.
+2. **Degrade gracefully, always.** Live data when the source is reliable; an honest, polished fallback when it isn't. A broken zero is never rendered as real data.
+3. **Runbooks over memory.** Every manual operational step gets written down as a numbered runbook section the day it's discovered — launches are executed, not improvised.
+
+---
+
+<div align="center">
+
+**Open to:** enterprise SaaS & AI engineering roles · platform partnerships · consulting
+
+[**🌐 devidentity.fabbythemes.com**](https://devidentity.fabbythemes.com) · [**💼 LinkedIn**](https://www.linkedin.com/in/abu-ahmad) · [**✉️ abuahmad105116@gmail.com**](mailto:abuahmad105116@gmail.com)
+
+<sub>© 2026 Abu Ahmad · DevIdentity is proprietary software — all rights reserved.</sub>
+
+</div>
+
 ---
 
 <div align="center">
