@@ -13,9 +13,103 @@
 ![](https://github-readme-stats.shion.dev/api/top-langs/?username=abuahmad369&theme=tokyonight&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=abuahmad369&limit=5&theme=dark&combine_all_yearly_contributions=true)
+<div align="center">
+
+# Abu Ahmad
+
+### Enterprise SaaS & AI Engineer
+
+**I build compliance-critical financial software where the security model is
+enforced in code — not promised in a slide deck.**
+
+[Live Product](https://consortium-ai-web.vercel.app) ·
+[Interactive Demo](https://consortium-ai-web.vercel.app/demo) ·
+[Case Study](https://github.com/abuahmad369/consortium-ai-case-study) ·
+📧 abuahmad105116@gmail.com
+
+</div>
 
 ---
-[![](https://komarev.com/ghpvc/?username=abuahmad369&icon=0&color=1)](https://visitcount.itsvg.in)
+
+## 🏦 Flagship: Consortium AI
+
+**A privacy-preserving fraud-detection network for commercial banks** —
+targeting duplicate financing and trade-based money laundering, the fraud
+class that lives *between* institutions where no single bank's controls can
+see it.
+
+> Banks will never share customer data — and they don't need to. A SHA-256
+> hash of an invoice number matches across institutions without revealing
+> the invoice to anyone. **Share signals, never data.**
+
+**What it does, end to end:** multimodal AI extraction (Gemini) with
+per-field confidence → a **fail-safe confidence gate** (missing confidence
+fails, never passes; the model can never approve itself) → accountable human
+review with authenticated reviewer identities → cryptographic anonymization
+at the node boundary → **scored cross-institution signal matching** with
+explainable, regulator-defensible reasoning → one-click compliance exports.
+
+**Engineering signals:** 200+ automated tests across the product and its
+reference implementation · 6 additive-only migrations with defensive-read
+deployment ordering · token-governed design system (WCAG AA) · full
+verification bar (type-check + tests + build + post-deploy production
+probes) on every push.
+
+🎯 **Try it without signing up:** the [public demo](https://consortium-ai-web.vercel.app/demo)
+runs the *actual production gate function* and real SHA-256 hashing in your
+browser — drag a confidence score below the bank's threshold and watch the
+system fail safe.
+
+## 🔐 Why the source is proprietary
+
+Consortium AI is a commercial B2B platform whose codebase, schemas, and
+architecture are the core IP (Copyright © 2026, All Rights Reserved). I keep
+the source private the same way the product keeps bank data private — **by
+policy, enforced consistently.** What I publish instead:
+
+- 📖 A [deep-dive case study](https://github.com/abuahmad369/consortium-ai-case-study)
+  — problem, architecture, and security properties an evaluator can verify
+  *from outside* the codebase
+- 🔍 A public [security architecture page](https://consortium-ai-web.vercel.app/security)
+  with boundary behaviors anyone can probe (try POSTing a raw identity field
+  to the consortium inbox — the API rejects it)
+- 🧪 The live product and in-browser demo
+
+**Source review is available under NDA** for enterprise evaluation and
+serious technical conversations — email with subject `NDA`.
+
+## 🛠️ How I build
+
+- **Zero-data-exposure, hash-based architecture** — identities cross trust
+  boundaries only as SHA-256 hashes, enforced at the receiving API and
+  verified end-to-end against source documents
+- **Accountable multi-tenant systems** — Postgres row-level security as the
+  isolation floor; rank-based roles where corrupt data coerces *down*, never
+  up; entitlements always server-resolved
+- **Immutable actor-attributed auditing** — append-only trails where every
+  event names the human, the authenticated reviewer, or the API key that
+  caused it
+- **Fail-safe AI engineering** — LLM output treated as untrusted in both
+  directions: injection-guarded prompts in, defensively normalized and
+  re-gated data out; provider-resilience layers (model-retirement-proof
+  aliases, backoff, capacity failover) so upstream chaos never reaches users
+- **Honest software** — designed empty states, capability-derived status
+  (never a decorative "all systems operational"), and errors that tell the
+  truth
+
+## ⚙️ Stack
+
+`TypeScript` `Next.js 15` `React` `Node.js` `Python` `FastAPI`
+`PostgreSQL + RLS` `Supabase` `Stripe` `Turborepo` `Tailwind`
+`Gemini / LLM integration` `Vitest` `pytest` `Vercel`
+
+---
+
+<div align="center">
+<sub>Open to enterprise SaaS engineering roles, technical partnerships, and
+design-partner conversations in fintech compliance.<br/>
+📧 <b>abuahmad105116@gmail.com</b> · 🔗 <a href="https://consortium-ai-web.vercel.app">consortium-ai-web.vercel.app</a></sub>
+</div>
+
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
